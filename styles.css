@@ -1,0 +1,241 @@
+body {
+  font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  color: #333333;
+}
+ 
+/* ---------- NAVBAR ---------- */
+.navbar-default {
+  background: linear-gradient(135deg, #2f3640 0%, #353b48 100%);
+  border: none;
+  margin-bottom: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+}
+ 
+.navbar-default .navbar-brand {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  padding: 15px 15px;
+  transition: all 0.3s ease;
+}
+ 
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffb142;
+  transform: scale(1.05);
+}
+ 
+/* Desktop menu items - right aligned */
+.navbar-default .navbar-nav.navbar-right {
+  margin-right: 0;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+.navbar-default .navbar-nav > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ffb142;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-default .navbar-nav > li > a:hover::after,
+.navbar-default .navbar-nav > li > a:focus::after {
+  width: 60%;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffb142;
+  background-color: transparent;
+  transform: translateY(-2px);
+}
+
+/* Mobile toggle button */
+.navbar-default .navbar-toggle {
+  border: 2px solid #576574;
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+}
+ 
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+  width: 22px;
+  height: 3px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+ 
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #40454f;
+  border-color: #ffb142;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #ffb142;
+}
+
+/* Mobile dropdown menu */
+.navbar-collapse {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-collapse.in,
+.navbar-collapse.collapsing {
+  background: linear-gradient(135deg, #40454f 0%, #353b48 100%);
+  border-top: 2px solid #ffb142;
+}
+
+/* Mobile menu items */
+.navbar-nav.visible-xs > li > a {
+  color: #ffffff;
+  padding: 18px 15px;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-nav.visible-xs > li > a:hover,
+.navbar-nav.visible-xs > li > a:focus {
+  background-color: #ffb142;
+  color: #2f3640;
+  padding-left: 25px;
+}
+
+.navbar-nav.visible-xs > li:last-child > a {
+  border-bottom: none;
+}
+ 
+/* ---------- PAGE HEADING ---------- */
+.page-heading {
+  font-weight: 700;
+  color: #2f3640;
+  margin: 30px 0 40px 0;
+  position: relative;
+  font-size: 36px;
+}
+
+.page-heading:after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffb142, #ff9a44);
+  margin: 15px auto 0 auto;
+  border-radius: 2px;
+}
+ 
+/* ---------- TALL SECTIONS ---------- */
+.tall-section {
+  min-height: 200px;
+  padding: 40px 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.tall-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Different background colors for each section */
+.chicken-bg {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+  border-left: 5px solid #e74c3c;
+}
+
+.beef-bg {
+  background: linear-gradient(135deg, #f5f0ff 0%, #ebe0ff 100%);
+  border-left: 5px solid #8e44ad;
+}
+
+.sushi-bg {
+  background: linear-gradient(135deg, #f0fff4 0%, #e0ffe8 100%);
+  border-left: 5px solid #27ae60;
+}
+ 
+.tall-section h3 {
+  font-weight: 700;
+  color: #2f3640;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.chicken-bg h3 {
+  color: #c0392b;
+}
+
+.beef-bg h3 {
+  color: #7d3c98;
+}
+
+.sushi-bg h3 {
+  color: #1e8449;
+}
+ 
+.tall-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.9;
+  font-size: 16px;
+  color: #4b4b4b;
+}
+ 
+/* ---------- RESPONSIVE TWEAKS ---------- */
+@media (max-width: 767px) {
+  .page-heading {
+    font-size: 28px;
+  }
+ 
+  .tall-section {
+    padding: 25px 18px;
+    min-height: 700px;
+    margin-bottom: 20px;
+  }
+ 
+  .tall-section p {
+    font-size: 15px;
+  }
+  
+  .tall-section:hover {
+    transform: translateY(0);
+  }
+}
+
+/* Tablet view adjustments */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-default .navbar-nav > li > a {
+    padding: 15px 18px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop view adjustments */
+@media (min-width: 992px) {
+  .navbar-default .navbar-nav > li > a {
+    padding: 15px 30px;
+    font-size: 17px;
+  }
+}
